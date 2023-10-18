@@ -1,7 +1,8 @@
 package collections;
 
-
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -25,7 +26,7 @@ public class CollectionsExample {
 		cars.add("BMW");
 		cars.add("Ford");
 		cars.add("Mazda");
-		
+
 		/// Access an element
 		cars.get(0);
 
@@ -54,7 +55,7 @@ public class CollectionsExample {
 
 		}
 
-		//	LinkedList
+		// LinkedList
 		LinkedList<String> ll = new LinkedList<String>();
 
 		ll.add("Ravi");
@@ -95,7 +96,9 @@ public class CollectionsExample {
 		System.out.println("Updated list : " + ll);
 
 		// Removing all the new elements from arraylist
-
+		ll.addFirst("Ravi");
+		ll.addLast("Manju");
+		System.out.println("Updated list : " + ll);
 		ll.removeAll(ll2);
 
 		System.out.println("After invoking removeAll() method: " + ll);
@@ -141,6 +144,7 @@ public class CollectionsExample {
 		al.add("Kumar");
 
 		al.add(1, "Sachin");
+		Collections.sort(al);
 
 		ListIterator<String> itr1 = al.listIterator();
 
@@ -155,10 +159,16 @@ public class CollectionsExample {
 		System.out.println("Traversing elements in backward direction");
 
 		while (itr1.hasPrevious()) {
-
-			System.out.println("index:" + itr1.previousIndex() + " value:" + itr1.previous());
-
+			if((itr1.previous()).equals("Sachin")) {
+				itr1.set("Anu");
+			}
 		}
+		for(String str : al) {
+			System.out.println(str);
+		}
+//		while(itr1.hasPrevious()) {
+//			System.out.println("index:" + itr1.previousIndex() + " value:" + itr1.previous());
+//		}
 
 //	HASHSET - DOES NOT MAINTAIN INSERTION ORDER, UNIQUE ELEMENTS
 
@@ -172,6 +182,8 @@ public class CollectionsExample {
 		set.add("Vijay");
 
 		set.add("Arun");
+
+		set.add("Sumit");
 
 		set.add("Sumit");
 
@@ -209,7 +221,7 @@ public class CollectionsExample {
 
 		set.clear();
 
-		/// TREESET -- unique,
+		/// TREESET -- unique, 
 
 		TreeSet<String> set2 = new TreeSet<String>();
 
@@ -223,6 +235,9 @@ public class CollectionsExample {
 
 		set2.add("E");
 
+		set2.add("D");
+
+		set2.add("E");
 		System.out.println("Intial Set: " + set2);
 
 		System.out.println("Head Set: " + set2.headSet("C"));
@@ -237,23 +252,17 @@ public class CollectionsExample {
 		PriorityQueue<Integer> queue = new PriorityQueue<Integer>();
 
 		// add
-
 		queue.add(10);
-
 		queue.add(3);
-
 		queue.add(11);
-
 		queue.add(1);
-
 		queue.add(4);
 
 		// peek - obtain head of queue
-
+		System.out.println("QUeue: " + queue);
 		queue.peek(); // --1
 
 		// poll - remove the head
-
 		queue.poll(); // --boolean
 
 		queue.peek(); // --3
@@ -278,8 +287,20 @@ public class CollectionsExample {
 
 		}
 
-		//	SET - NO DUPLICATE ELEMENT 
-		//	hashset treeset
+		// SET - NO DUPLICATE ELEMENT
+		// hashset treeset
+		
+		List<Person> persons = new ArrayList<>();
+		Person person = new Person("Anu",23,52,155);
+		Person person1 = new Person("Ravi",23,52,155);
+		Person person2 = new Person("Varsha",23,52,155);
+		
+		persons.add(person2);
+		persons.add(person1);
+		persons.add(person);
+		for(Person per : persons) {
+			System.out.println(per);
+		}
 	}
 
 }
