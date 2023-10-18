@@ -1,0 +1,93 @@
+Java 8 features:
+
+	Lambda Expressions
+	Functional Interfaces
+	Method Reference
+	Streams
+	Comparable and Comparator
+	Optional Class
+	Date/Time API
+
+Lambda Expressions
+• Lambda is equivalent to a function (method) without a name. 
+• Lambda’s are also referred as Anonymous functions. 
+	• Method parameters 
+	• Method Body 
+	• Return Type 
+• Lambdas are not tied to any class like a regular method. 
+• Lambda can also be assigned to variable and passed around.
+
+Syntax of the Lambda Expression
+
+Lambda Expression: 
+( )		 	->		 			{ } 
+Lambda 		Arrow Lambda		Body 
+input 
+Parameters
+
+Why we use Lambda Expression?
+
+	To provide the implementation of Functional interface.
+	Less coding.
+	
+Functional Interface
+Lambda expression provides implementation of functional interface. An interface which has only one abstract method is called functional interface. Java provides an anotation @FunctionalInterface, which is used to declare an interface as functional interface.
+
+
+Method Reference
+
+ 
+Syntax of Method Reference
+
+	ClassName::instance-methodName 
+	ClassName::static-methodName 
+	Instance::methodName
+
+Where to use Method Reference?
+
+• Lambda expressions referring to a method directly. 
+
+Using Lambda: 
+toUpperCaseLambda = (s)->s.toUpperCase(); 
+
+Using Method Reference:
+toUpperCaseMethodRefernce = String::toUpperCase;
+
+Stream 
+
+What is a Stream ?
+
+• Stream is a sequence of elements which can be created out of a collections such as List or Arrays or any kind of I/O resources and etc., 
+	List<String> names = Arrays.asList("adam","dan","jenny");
+	names.stream(); // creates a stream
+• Stream operations can be performed either sequentially or parallel. 
+	names.parallelStream(); // creates a parallel stream
+• Main purpose is to perform some Operation on Collections. 
+• Parallel operations are easy to perform with Streams API without having to spawn a multiple threads. 
+• Streams API can be also used with arrays or any kind of I/O.
+
+intermediate operator
+
+map()
+filter()
+
+terminator operator
+
+reduce()
+collect()
+forEach()
+
+distinct() , count() and sorted() limit()
+
+• distinct – Returns a stream with unique elements 
+• count – Returns a long with the total no of elements in the Stream. 
+• sorted - Sort the elements in the stream
+
+sum() 
+max() 
+min() 
+average()
+
+Optional Class
+
+• Avoids Null Pointer Exception and Unnecessary Null Checks. 
