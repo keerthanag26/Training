@@ -1,0 +1,45 @@
+Collection
+
+The Java collections framework provides a set of interfaces and classes to implement various data structures and algorithms.
+s
+
+Collection -> Interface 
+
+Collections -> classe with multiple methods
+			    different type of data structures
+				
+				
+List<Customer> list = new ArrayList<String>();
+List 
+	ArrayList
+	LinkedList
+	Vector
+	Stack
+
+insertion order
+
+QUEUE
+	PriorityQueue
+
+Last in first out
+
+SET
+	HashSet
+	TreeSet
+	LinkedHashSet
+
+NO DUPLICATE ELEMENT, not in insertion order
+		
+		
+MAP
+	Hashmap
+	LinkedHashmap
+	HashTable
+
+A map is a collection of pairs of objects:
+	1. A value: this is the object to be stored.
+	2. A key: this is another object associated with the value, and which can be
+	used to quickly find the value within the collection.
+	A map is really a set of keys, with each each key
+	having a value attached to it.
+	Maps do not allow duplicate keys.

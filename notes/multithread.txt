@@ -1,0 +1,29 @@
+Multithreading 
+	process of executing multiple threads simultaneously.
+
+Advantages of Java Multithreading
+1) It doesn't block the user because threads are independent and you can perform multiple operations at the same time.
+
+2) You can perform many operations together, so it saves time.
+
+3) Threads are independent, so it doesn't affect other threads if an exception occurs in a single thread.
+
+
+Life cycle of a Thread
+
+In Java, a thread always exists in any one of the following states.
+
+New
+Active
+Blocked / Waiting
+Timed Waiting
+Terminated
+
+- New State   
+- Runnable State  ->  start() method
+- Running State     -> a thead is running with run() method 
+- Waiting State	    -> sleep(),  wait() method
+- Dead State
+
+Through notify(), you will go to waiting state to runnable state.
+From Running, Runnable state to dead state through stop() method.
