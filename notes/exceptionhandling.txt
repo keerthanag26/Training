@@ -1,0 +1,46 @@
+Exception
+
+An expectation is an unexpected event that occurs while executing the program, that disturbs the normal flow of the code.
+
+Java Exception Hierarchy
+
+	Throwable –
+	It is the root class for the exception hierarchy in java. 
+	It is in the java.lang package.
+	
+	Exception –
+	Subclass of Throwable.
+	Consist of abnormal conditions that can be handled explicitly.
+	If one handles the exception then our code will continue to execute smoothly.
+	
+	Error –
+	Subclass of Throwable.
+	Eg: StackOverFlowError that can happen in infinite loop or recursion
+	
+TYPES OF EXCEPTION IN JAVA
+
+	Checked Exceptions - checked at compile-time
+	They are child classes of Exception except for RuntimeException.
+	Example: IOException, ClassNotFoundException, etc.
+	
+	Unchecked Exceptions - checked at runtime
+	They are child classes of RuntimeException.
+	They give runtime errors if not handled explicitly.
+	Example: ArithmeticException, NullPointerException etc
+
+Java Exception Keywords
+Exception Handling in java is managed via five keywords: 
+try, catch, throw, throws, and finally. 
+
+KEYWORD	 
+try		This keyword is used to specify a block and this block must be followed by either catch or finally. That is, we can’t use try block alone.
+catch	This keyword must be preceded by a try block to handle the exception and can be followed by a final block later.
+finally	This keyword is used to execute the program, whether an exception is handled or not.
+throw	This keyword is used to throw an exception.
+throws	This keyword is used to declare exceptions.
+
+
+Java Custom Exception
+You can create your own exception and give implementation as to how it should behave. Your exception will behave like a child’s class of Exception.
+
+Syntax: class YourException extends Exception{}
