@@ -31,18 +31,21 @@ Why we use Lambda Expression?
 	Less coding.
 	
 Functional Interface
-Lambda expression provides implementation of functional interface. An interface which has only one abstract method is called functional interface. Java provides an anotation @FunctionalInterface, which is used to declare an interface as functional interface.
+Lambda expression provides implementation of functional interface. An interface which has only one abstract method is called functional interface. 
+Java provides an anotation @FunctionalInterface, which is used to declare an interface as functional interface.
 
 
 Method Reference
 
- 
+Method reference is used to refer method of functional interface. easy form of lambda expression. 
+Each time when you are using lambda expression to just referring a method, you can replace your lambda expression with method reference.
+
 Syntax of Method Reference
 
 	ClassName::instance-methodName 
 	ClassName::static-methodName 
 	Instance::methodName
-
+	CassName::new 
 Where to use Method Reference?
 
 • Lambda expressions referring to a method directly. 
